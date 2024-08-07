@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p></p>
+      <span><p></p></span>
+    </div>
+    <script>
+      // const palindrome = (str) => {
+      // 	return str.split('').every((char, index) => {
+      // 		console.log(char, str[str.length - 1 - index]);
+      // 	});
+      // };
+
+      // const palindrome = (str) => {
+      //   str.split("").forEach((char, index) => {
+      //     console.log(char, str[str.length - 1 - index]);
+      // 		console.log(index, str.length - 1 - index);
+      //   });
+      // };
+
+      // palindrome("racecar");
+
+      const chunk = (array, size) => {
+        const chunked = [];
+
+        for (let element of array) {
+          const last = chunked[chunked.length - 1];
+
+          if (!last || last.length === size) {
+            chunked.push([element]);
+          } else {
+            last.push(element);
+          }
+        }
+
+        return chunked;
+      };
+
+      console.log(chunk([1, 2, 3, 4, 5, 6], 2));
+
+     
+
+
+    </script>
+  </body>
+</html>
